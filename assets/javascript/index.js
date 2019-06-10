@@ -1,59 +1,59 @@
-let projects = [
-    {
-        name: "giphyAPI",
-        img: "../images/giphy-logo.png",
-        description: "A simple demonstration of my the basic knowledge of using API keys. This app takes a user input and returns twenty gifs related to whatever the user searched for, and adds a button that saves the input data incase the user wants to revisit any previous searches.",
-        link: "https://emalley.github.io/giphyAPI/",
-    },
+let projects = [{
+    name: "giphyAPI",
+    image: "assets/images/giphy-logo.png",
+    description: "A simple demonstration of my the basic knowledge of using API keys. This app takes a user input and returns twenty gifs related to whatever the user searched for, and adds a button that saves the input data incase the user wants to revisit any previous searches.",
+    link: "https://emalley.github.io/giphyAPI/",
+},
 
-    {
-        name: "giphyAPI",
-        img: "../images/giphy-logo.png",
-        description: "A simple demonstration of my the basic knowledge of using API keys. This app takes a user input and returns twenty gifs related to whatever the user searched for, and adds a button that saves the input data incase the user wants to revisit any previous searches.",
-        link: "https://emalley.github.io/giphyAPI/",
-    }
+{
+    name: "API2",
+    image: "assets/images/Eric.png",
+    description: "A simple demonstration of my the basic knowledge of using API keys. This app takes a user input and returns twenty gifs related to whatever the user searched for, and adds a button that saves the input data incase the user wants to revisit any previous searches.",
+    link: "https://emalley.github.io/giphyAPI/",
+}
 ];
 
-
-function createProjectCard(name, img, description, link) {
-    let card = $('<div>', {
-        class: 'projectCard',
+function createProjectCard(projectId, imgSrc, name, desc) {
+    let cardDiv = $("<div>", {
+        class: 'card project-card',
+        'data-projectID': projectId,
+        style: 'opacity:1'
     });
-    var imgDiv = $('<img>', {
-        class: 'projectImg w-100',
+
+    let imageDiv = $('<img>', {
+        class: 'project-image w-100 h-100',
         alt: `${name} image`,
-        src: img
-    });
-    let cardBodyDiv = $('<div>',{class: 'card-body'});
-    let nameDiv = $('<div>', {
-        class:'projectName text-center',
-        html:`<h3 class= "text-truncate">${name}</h3>`
-    });
-    let descriptionDiv = $('<div>', {
-        class : 'projectDescription',
-        text: '${description.substring(0,150)}...'
+        src: imgSrc
     });
 
-    cardBodyDiv.append(nameDiv, descriptionDiv);
-    card.append(imgDiv, cardBodyDiv);
+    let cardBodyDiv = $('<div>', { class: 'card-body' });
+    let projectNameDiv = $('<div>', {
+        class: 'project-Name',
+        text: `<h3>${name}</h3>`
+    });
 
-    return card
+    let descDiv = $("<div>", {
+        class: "project-Desc",
+        text: desc
+    })
+
+    cardBodyDiv.append(projectNameDiv, descDiv);
+    cardDiv.append(imageDiv, cardBodyDiv)
+
+    return cardDiv;
 }
 
-function createCards () {
-    for (var i = 0; i < projects.length; i++) {
+function projectLoop () {
+    for( var i =0; i < projects.length; i ++) {
         let name = projects[i].name;
-        let image = projects[i].image;
-        let description = projects[i].description;
-        let link = $('<a>', {
-            target: '_blank',
-            href: projects[i].link
-        });
-        let projectCard = createProjectCard(name,image,description);
-        $('.projects').append(link.append(projectCard)).attr('style', 'text-align:center; justify-content: center');
-    };
+        let img = projects[i].image;
+        let desc = projects[i].description;
+        let link = $("<a>",{href:projects[i].link})
+        let projectCard= createProjectCard(name, img, desc);
+        $('.projects').append(link.append(projectCard)).attr('style', 'text-align:center; justify-content:center')
+    }
 }
-$(document).ready(function(){
-    createProjectCard();
-    createCards();
+
+$(document).ready(function () {
+    projectLoop();
 })
