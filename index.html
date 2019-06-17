@@ -13,10 +13,12 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Scripts -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="./assets/javascript/index.js"></script>
     <title>Eric Malley</title>
 </head>
@@ -41,9 +43,9 @@
 
     <div class="homeBackground">
         <div class="container">
-            <div class="hero ">
-                <img src="./assets/images/ProfessionalLogo.png" class="img-fluid" alt="Responsive image">
-            </div>
+            <!-- <div class="hero "> -->
+            <img src="./assets/images/ProfessionalLogo.png" class="img-fluid" alt="Responsive image">
+            <!-- </div> -->
         </div>
     </div>
 
@@ -92,46 +94,86 @@
             </div>
             <div class="row">
                 <div class="col-md-4 lg-4">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>Javascript</li>
-                    <li>JQuery</li>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
-                    <li>APIs</li>
-                    <li>Templating Engines</li>
-                    <li>Search Engine Optimization</li>
+                    <ul id="skillsList">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Javascript</li>
+                        <li>JQuery</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>APIs</li>
+                        <li>Templating Engines</li>
+                        <li>Search Engine Optimization</li>
+                    </ul>
                 </div>
                 <div class="col-md-4 lg-4">
-                    <li>Twitter BootStrap</li>
-                    <li>Materalize CSS</li>
-                    <li>AJAX</li>
-                    <li>Realtime Cloud Databases</li>
-                    <li>React JS</li>
-                    <li>Heroku</li>
-                    <li>Creating APIs</li>
-                    <li>Git</li>
-                    <li>Github</li>
+                    <ul id="skillsList">
+                        <li>Twitter BootStrap</li>
+                        <li>Materalize CSS</li>
+                        <li>AJAX</li>
+                        <li>Realtime Cloud Databases</li>
+                        <li>React JS</li>
+                        <li>Heroku</li>
+                        <li>Creating APIs</li>
+                        <li>Git</li>
+                        <li>Github</li>
+                    </ul>
                 </div>
                 <div class="col-md-4 lg-4">
-                    <li>Visual Studio Code</li>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>MVC</li>
-                    <li>User Authentication</li>
-                    <li>ORM (Sequelize)</li>
-                    <li>Algorithms</li>
-                    <li>Adobe Photoshop</li>
-                    <li>JSON</li>
+                    <ul id="skillsList">
+                        <li>Visual Studio Code</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MVC</li>
+                        <li>User Authentication</li>
+                        <li>ORM (Sequelize)</li>
+                        <li>Algorithms</li>
+                        <li>Adobe Photoshop</li>
+                        <li>JSON</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <section id='footer contact'>
-        
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!" class="btn-floating btn mx-1">
+                                    <i class="fa fa-linkedin fa-3x"> </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li class="list-unstyled item text-center">
+                                <a href="#!" class="btn-floating btn-tw mx-1">
+                                    <i class="fa fa-envelope fa-3x"> </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li class="list-unstyled item text-center">
+                                <a href="#!" class="btn-floating btn-gplus mx-1">
+                                    <i class="fa fa-phone fa-3x"> </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            </div>
+        </footer>
     </section>
-
 </body>
 
 </html>

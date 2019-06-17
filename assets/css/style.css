@@ -17,15 +17,20 @@ body {
     background-image: url("../images/landing.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height:100vh;
-    width:100%;
-}
-
-.hero {
+    background-position: center;
     height:100vh;
     width:100%;
 }
 
 #aboutMe {
     background-color:rgba(165, 158, 158, 0.267)
+}
+
+
+#skillsList {
+   list-style: none;
+}
+
+footer {
+    border:1px solid red
 }
