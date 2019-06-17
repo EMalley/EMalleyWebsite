@@ -3,6 +3,7 @@ let projects = [{
     image: "assets/images/giphy-logo.png",
     description: "A simple demonstration of my the basic knowledge of using API keys. This app takes a user input and returns twenty gifs related to whatever the user searched for, and adds a button that saves the input data incase the user wants to revisit any previous searches.",
     link: "https://emalley.github.io/giphyAPI/",
+    github: "https://github.com/EMalley/giphyAPI"
 },
 
 {
@@ -10,6 +11,7 @@ let projects = [{
     image: "assets/images/Eric.png",
     description: "A simple demonstration of my the basic knowledge of using API keys. This app takes a user input and returns twenty gifs related to whatever the user searched for, and adds a button that saves the input data incase the user wants to revisit any previous searches.",
     link: "https://emalley.github.io/giphyAPI/",
+    github: "https://github.com/EMalley/giphyAPI"
 }
 ];
 
@@ -17,19 +19,20 @@ function createProjectCard(projectId, imgSrc, name, desc) {
     let cardDiv = $("<div>", {
         class: 'card project-card',
         'data-projectID': projectId,
-        style: 'opacity:1'
+        style: 'width:18rem'
     });
 
     let imageDiv = $('<img>', {
-        class: 'project-image w-100 h-100',
-        alt: `${name} image`,
+        class: 'project-image',
+        style:'width:18rem',
+        alt: `${desc} image`,
         src: imgSrc
     });
 
     let cardBodyDiv = $('<div>', { class: 'card-body' });
-    let projectNameDiv = $('<div>', {
-        class: 'project-Name',
-        text: `<h3>${name}</h3>`
+    let projectNameDiv = $('<button>', {
+        class: 'project-Name btn',
+        text: 'Website',
     });
 
     let descDiv = $("<div>", {
