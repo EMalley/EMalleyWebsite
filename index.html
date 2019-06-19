@@ -19,7 +19,8 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./assets/javascript/index.js"></script>
+    <script src="./assets/javascript/parallax.min.js"></script>
+
     <title>Eric Malley</title>
 </head>
 
@@ -30,22 +31,23 @@
         </a>
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link active" href="./pages/about.html">About Me</a>
+                <a class="nav-link active" href="#!">About Me</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./pages/projects.html">Protfolio</a>
+                <a class="nav-link" href="#!">Protfolio</a>
             </li>
             <!-- <li class="nav-item">
                 <a class="nav-link" href="./pages/">Contact</a>
             </li> -->
         </ul>
     </nav>
-
-    <div class="homeBackground">
-        <div class="container">
-            <!-- <div class="hero "> -->
-            <img src="./assets/images/ProfessionalLogo.png" class="img-fluid" alt="Responsive image">
-            <!-- </div> -->
+    <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/landing.png" data-z-index="1">
+        <div class="homeBackground">
+            <div class="container">
+                <div class="logo">
+                    <img src="./assets/images/ProfessionalLogo.png" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -135,44 +137,59 @@
             </div>
         </div>
     </section>
+    <hr>
 
     <section id='footer contact'>
         <footer class="page-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <ul class="list-unstyled list-inline text-center">
                             <li class="list-inline-item">
-                                <a href="#!" class="btn-floating btn mx-1">
+                                <a href="https://www.linkedin.com/in/eric-malley/" class="btn-floating btn mx-1">
                                     <i class="fa fa-linkedin fa-3x"> </i>
                                 </a>
-                            </li>
+                            </li><br>
+                            <h6 class='text-center'>LinkedIn</h6>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <ul>
                             <li class="list-unstyled item text-center">
                                 <a href="#!" class="btn-floating btn-tw mx-1">
                                     <i class="fa fa-envelope fa-3x"> </i>
                                 </a>
-                            </li>
+                            </li><br>
+                            <h6 class='text-center'>EMalley998@gmail.com</h6>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
+                        <ul>
+                            <li class="list-unstyled item text-center">
+                                <a href="https://drive.google.com/file/d/1Vnpl9FOIU8m6oycbg1QC3gIqVFM1nI8E/view"
+                                    class="btn-floating btn-gplus mx-1">
+                                    <i class="fa fa-file fa-3x"> </i>
+                                </a>
+                            </li><br>
+                            <h6 class='text-center'>Resume</h6>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
                         <ul>
                             <li class="list-unstyled item text-center">
                                 <a href="#!" class="btn-floating btn-gplus mx-1">
                                     <i class="fa fa-phone fa-3x"> </i>
                                 </a>
-                            </li>
+                            </li><br>
+                            <h6 class='text-center'>(908) 310-9798</h6>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-            </div>
         </footer>
+        <div class="footer-copyright text-center py-3">
+            <h6>© 2018 || Eric Malley Web Development</h6>
+        </div>
     </section>
 </body>
 
