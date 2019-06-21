@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <!-- Scripts -->
+    <script src="./assets/javascript/index.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
@@ -36,9 +39,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#!">Protfolio</a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="./pages/">Contact</a>
-            </li> -->
+            </li>
         </ul>
     </nav>
     <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/landing.png" data-z-index="1">
@@ -51,92 +54,104 @@
         </div>
     </div>
 
-    <section id="aboutMe">
-        <div class="container">
-            <div class="jumbotron-fliud">
+    <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/about-background.png" data-z-index="1">
+        <section id="aboutMe">
+            <div class="container">
+                <div class="jumbotron-fliud">
+                    <div class="row">
+                        <div class="col-md-4 my-5">
+                            <img id="Eric" src="./assets/images/Eric.png" alt="" srcset="">
+                        </div>
+                        <div class="col-md-8 text-center my-5">
+                            <h2>About Me</h2>
+                            <br>
+                            <p class="bio">I am a Graduate of Rutgers University Full Stack Web Development Coding Boot
+                                Camp,
+                                where
+                                I have acquired a deep understanding of OOP and MERN stack web development. Coming from
+                                a
+                                previous background in the entertainment industry, I naturally
+                                gravitated toward front end web development and delivering a clean, concise user
+                                experience
+                                on websites I create. Whether on a team or as an individual, I strive to deliver high
+                                quality content that demonstrates a hard work
+                                ethic and a thorough understanding of contemporary web development standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/projects.png" data-z-index="1">
+        <section id="portfolio">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-4 my-5">
-                        <img id="Eric" src="./assets/images/Eric.png" alt="" srcset="">
-                    </div>
-                    <div class="col-md-8 text-center my-5">
-                        <h2>About Me</h2>
-                        <br>
-                        <p class="bio">Graduate of Rutgers University Full Stack Web Development Coding Boot Camp, where
-                            I have acquired a deep understanding of OOP and MERN stack web development. Coming from a
-                            previous background in the entertainment industry, I naturally
-                            gravitated toward front end web development and delivering a clean, concise user experience
-                            on websites I create. Whether on a team or as an individual, I strive to deliver high
-                            quality content that demonstrates a hard work
-                            ethic and a thorough understanding of contemporary web development standards.</p>
+                    <div class="col-md-12">
+                        <div class="projectHeader text-center">
+                            <h2>My Projects</h2>
+                        </div>
+                        <div class="projects">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="projects">
+
+    <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/lines.png" data-z-index="1">
+        <section id="skills">
+            <div class="container skillText">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Relevent Skills</h2> <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 lg-4">
+                        <ul id="skillsList">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Javascript</li>
+                            <li>JQuery</li>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>APIs</li>
+                            <li>Templating Engines</li>
+                            <li>Search Engine Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 lg-4">
+                        <ul id="skillsList">
+                            <li>Twitter BootStrap</li>
+                            <li>Materalize CSS</li>
+                            <li>AJAX</li>
+                            <li>Realtime Cloud Databases</li>
+                            <li>React JS</li>
+                            <li>Heroku</li>
+                            <li>Creating APIs</li>
+                            <li>Git</li>
+                            <li>Github</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 lg-4">
+                        <ul id="skillsList">
+                            <li>Visual Studio Code</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>MVC</li>
+                            <li>User Authentication</li>
+                            <li>ORM (Sequelize)</li>
+                            <li>Algorithms</li>
+                            <li>Adobe Photoshop</li>
+                            <li>JSON</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <br>
-
-    <section id="skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>Relevent Skills</h2> <br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 lg-4">
-                    <ul id="skillsList">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>Javascript</li>
-                        <li>JQuery</li>
-                        <li>MySQL</li>
-                        <li>MongoDB</li>
-                        <li>APIs</li>
-                        <li>Templating Engines</li>
-                        <li>Search Engine Optimization</li>
-                    </ul>
-                </div>
-                <div class="col-md-4 lg-4">
-                    <ul id="skillsList">
-                        <li>Twitter BootStrap</li>
-                        <li>Materalize CSS</li>
-                        <li>AJAX</li>
-                        <li>Realtime Cloud Databases</li>
-                        <li>React JS</li>
-                        <li>Heroku</li>
-                        <li>Creating APIs</li>
-                        <li>Git</li>
-                        <li>Github</li>
-                    </ul>
-                </div>
-                <div class="col-md-4 lg-4">
-                    <ul id="skillsList">
-                        <li>Visual Studio Code</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>MVC</li>
-                        <li>User Authentication</li>
-                        <li>ORM (Sequelize)</li>
-                        <li>Algorithms</li>
-                        <li>Adobe Photoshop</li>
-                        <li>JSON</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <hr>
 
     <section id='footer contact'>
