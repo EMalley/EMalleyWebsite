@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
     <!-- Scripts -->
     <script src="./assets/javascript/index.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
@@ -28,23 +29,30 @@
 </head>
 
 <body>
-    <nav class="navbar sticky-top">
-        <a class="navbar-brand" href="./index.html">
-            <img class="navLogo" src="./assets/images/NavlogoInveted.png" width="150" height="100" alt="">
-        </a>
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="#!">About Me</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#!">Protfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./pages/">Contact</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <button class= "navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class= "navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="#">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">CONTACT</a>
+                </li>
+                <li class="slide"></li>
+            </ul>
+        </div>
     </nav>
-    <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/landing.png" data-z-index="1">
+
+    <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/elCap.png" data-z-index="1">
         <div class="homeBackground">
             <div class="container">
                 <div class="logo">
@@ -54,15 +62,17 @@
         </div>
     </div>
 
-    <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/about-background.png" data-z-index="1">
+    <div class="parallax" data-parallax="scroll" data-image-src="./assets/images/AboutMe-background.png"
+        data-z-index="1">
         <section id="aboutMe">
             <div class="container">
                 <div class="jumbotron-fliud">
                     <div class="row">
-                        <div class="col-md-4 my-5">
+                        <div class="col-4 col-md-4 my-5">
                             <img id="Eric" src="./assets/images/Eric.png" alt="" srcset="">
+                            <!-- Add media Queires here  -->
                         </div>
-                        <div class="col-md-8 text-center my-5">
+                        <div class="col-8 col-md-8 text-center my-5">
                             <h2>About Me</h2>
                             <br>
                             <p class="bio">I am a Graduate of Rutgers University Full Stack Web Development Coding Boot
@@ -87,16 +97,16 @@
         <section id="portfolio">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col">
                         <div class="projectHeader text-center">
                             <h2>My Projects</h2>
                         </div>
-                        <div class="projects">
-                        </div>
+                        <!-- <div class="projects"> -->
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
 
 
@@ -109,7 +119,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 lg-4">
+                    <div class="col-4 col-md-4 lg-4">
                         <ul id="skillsList">
                             <li>HTML5</li>
                             <li>CSS3</li>
@@ -122,22 +132,23 @@
                             <li>Search Engine Optimization</li>
                         </ul>
                     </div>
-                    <div class="col-md-4 lg-4">
+                    <div class="col-4 col-md-4 lg-4">
                         <ul id="skillsList">
                             <li>Twitter BootStrap</li>
                             <li>Materalize CSS</li>
                             <li>AJAX</li>
-                            <li>Realtime Cloud Databases</li>
+                            <li>Cloud Databases</li>
                             <li>React JS</li>
                             <li>Heroku</li>
-                            <li>Creating APIs</li>
+                            <li>APIs</li>
                             <li>Git</li>
                             <li>Github</li>
                         </ul>
                     </div>
-                    <div class="col-md-4 lg-4">
+                    <div class="col-4 col-md-4 lg-4">
                         <ul id="skillsList">
-                            <li>Visual Studio Code</li>
+                            <li class="mediaVscOn">VS Code</li>
+                            <li class="mediaVscOff">Visual Studio Code</li>
                             <li>Node.js</li>
                             <li>Express.js</li>
                             <li>MVC</li>
@@ -152,10 +163,9 @@
             </div>
         </section>
     </div>
-    <hr>
 
     <section id='footer contact'>
-        <footer class="page-footer">
+        <footer class="page-footer bg-dark py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
@@ -165,7 +175,7 @@
                                     <i class="fa fa-linkedin fa-3x"> </i>
                                 </a>
                             </li><br>
-                            <h6 class='text-center'>LinkedIn</h6>
+                            <h6 class='text-center text-white'>LinkedIn</h6>
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -175,7 +185,7 @@
                                     <i class="fa fa-envelope fa-3x"> </i>
                                 </a>
                             </li><br>
-                            <h6 class='text-center'>EMalley998@gmail.com</h6>
+                            <h6 class='text-center text-white'>EMalley998@gmail.com</h6>
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -186,7 +196,7 @@
                                     <i class="fa fa-file fa-3x"> </i>
                                 </a>
                             </li><br>
-                            <h6 class='text-center'>Resume</h6>
+                            <h6 class='text-center text-white'>Resume</h6>
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -196,13 +206,13 @@
                                     <i class="fa fa-phone fa-3x"> </i>
                                 </a>
                             </li><br>
-                            <h6 class='text-center'>(908) 310-9798</h6>
+                            <h6 class='text-center text-white'>(908) 310-9798</h6>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
-        <div class="footer-copyright text-center py-3">
+        <div class="footer-copyright text-center py-3 bg-dark text-white">
             <h6>© 2018 || Eric Malley Web Development</h6>
         </div>
     </section>
