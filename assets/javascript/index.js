@@ -32,9 +32,9 @@ let projects = [
     }
 ];
 
-function createProjectCard(name, imgSrc, description,) {
+function createProjectCard(name, imgSrc, description,linktorepo) {
     var cardDiv = $('<div>', {
-        class: 'media',
+        class: 'card projectCard',
         style: 'width:18rem'
     });
     var imageDiv = $('<img>', {
@@ -42,14 +42,14 @@ function createProjectCard(name, imgSrc, description,) {
         alt: `${name} image`,
         src: imgSrc
     });
-    var cardBodyDiv = $('<div>', { class: 'media-body' });
-    var nameDiv = $('<h3>', {
+    var cardBodyDiv = $('<div>', { class: 'card-body' });
+    var nameDiv = $('<div>', {
         class: 'project-name text-center',
-        html: `<h3 class="text-truncate">${name}</h3>`,
+        html: `<a class="text-truncate" href=${linktorepo}>${name}</h3>`,
     });
     var descDiv = $('<div>', {
         class: 'project-desc',
-        html: `${description.substring(0, 100)}...`
+        html: `${description.substring(0, 150)}...`
     });
     
 
@@ -66,12 +66,14 @@ function displayCards() {
         var imgSrc = projects[i].image;
         var description = projects[i].description
         var projectLink = $("<a>", {
-            class:"projectLink btn btn-primary",
+            class:"projectLink",
+            style:"z-index:200000000",
             href: projects[i].link
         });
 
-        var projectCard = createProjectCard(name, imgSrc, description);
-        $(".projects").append(projectCard).append(projectLink)
+        var projectCard = createProjectCard(name, imgSrc, description, projects[i].link);
+        projectCard.children(".project-name").append(projectLink)
+        $(".projects").append(projectCard)
     }
 }
 
