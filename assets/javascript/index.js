@@ -15,7 +15,7 @@ let projects = [
         name: "Eat the Burger",
         image: "assets/images/burger.jpg",
         description: "A app that follows OOP and CRUD principles by ordering burgers, where the user can the eat, and then delete their burger data. The database is a MySQL sever using Sequelize.",
-        link: "https://github.com/EMalley/spiceIt",
+        link: "https://github.com/EMalley/burgers",
     },
     {
         name: "React Memory Game",
