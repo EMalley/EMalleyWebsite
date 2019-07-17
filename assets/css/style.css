@@ -19,21 +19,20 @@ body {
 
 .nav-item a {
     font-family: 'Archivo Black', sans-serif;
-    padding:20px;
+    padding: 20px;
     cursor: pointer;
-    color:#fffe
+    color: #fffe
 }
 
-.slide{
+.slide {
     position: absolute;
     top: 0;
     left: 0;
-    background:#fff
+    background: #fff
 }
 
 .nav-item a:hover {
     text-decoration: none;
-    
 }
 
 #Eric {
@@ -64,18 +63,6 @@ body {
     text-shadow: 1px 2px #000;
 }
 
-.projectHeader {
-    position: relative;
-    z-index: 2;
-    color: #fffe;
-    text-shadow: 1px 2px #000;
-}
-
-#portfolio {
-    position: relative;
-    z-index: 2;
-}
-
 #skills {
     position: relative;
     height: 100vh;
@@ -94,13 +81,71 @@ body {
     list-style-type: circle;
 }
 
-.projectCard {
-    margin: 0,auto
+.logosContainer{
+    margin-top:100px;
 }
 
+.codingLogos {
+    height:100px;
+    max-width:100%;
+}
+
+/* PORTFOLIO SECTION */
+
+#portfolio {
+    align-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.projectHeader {
+    position: relative;
+    z-index: 2;
+    color: #fffe;
+    text-shadow: 1px 2px #000;
+}
+
+.card {
+    margin:10px;
+    display:inline-block;
+    background-color: rgba(189, 189, 189, 0.933);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    max-height: 100%;
+    /* overflow: auto; */
+}
+
+.projectName {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 28px;
+    text-shadow: 1px 2px #000;
+}
+
+.projectImage {
+    height:200px;
+    width:200px
+}
+
+.projectLink {
+    color: #ffe;
+    text-decoration: none;
+}
+
+.projectLink:hover {
+    text-decoration: none;
+}
+
+.projectDesc {
+    color: black;
+    text-shadow: none;
+    font-family: 'Oxygen', sans-serif
+}
+
+/* MEDIA */
 
 @media (min-width:320px) and (max-width: 767px) {
     #skillsList {
-        font-size:20px;
+        font-size: 20px;
     }
 }

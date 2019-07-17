@@ -2,7 +2,7 @@ let projects = [
     {
         name: "Wall-IT",
         image: "assets/images/WallItLogo.png",
-        description: "Built using React.js, Wall-IT is financing program that organizes all of your personal Finances, from monthly bills, stock holdings, and mortages rates. Wall-IT is a centralized hub for all your budgeting and monetary needs.",
+        description: "Built using React.js, Wall-IT is financing program that organizes all of your personal Finances, from monthly bills, stock holdings, and mortages rates.",
         link: "https://github.com/EMalley/wall-it",
     },
     {
@@ -27,31 +27,37 @@ let projects = [
     {
         name: "LIRI Bot",
         image: "assets/images/LIRIBOT.png",
-        description: "A Language Interpretation and Recognition Interface. LIRI bot is a command line script that runs specific commands and update the user with a response. ",
+        description: "A Language Interpretation and Recognition Interface. LIRI bot is a command line script that runs specific commands and update the user with a response.",
         link: "https://github.com/EMalley/Liri-Node-App",
+    },
+    {
+        name: "Giphy API",
+        image: "assets/images/giphy-logo.png",
+        description: "A demonstration of my knowledge of APIs, using the giphy API. The user can search for any kind of image and have the images be saved to a button, which then can be revisited later.",
+        link: "https://github.com/EMalley/giphyAPI",
     }
 ];
 
-function createProjectCard(name, imgSrc, description,linktorepo) {
+function createProjectCard(name, imgSrc, description, linktorepo) {
     var cardDiv = $('<div>', {
         class: 'card projectCard',
         style: 'width:18rem'
     });
     var imageDiv = $('<img>', {
-        class: 'project-image w-100',
+        class: 'projectImage w-100',
         alt: `${name} image`,
         src: imgSrc
     });
     var cardBodyDiv = $('<div>', { class: 'card-body' });
     var nameDiv = $('<div>', {
-        class: 'project-name text-center',
-        html: `<a class="text-truncate" href=${linktorepo}>${name}</h3>`,
+        class: 'projectName text-center',
+        html: `<a class="text-truncate projectLink" href=${linktorepo}>${name}</h3>`,
     });
     var descDiv = $('<div>', {
-        class: 'project-desc',
-        html: `${description.substring(0, 150)}...`
+        class: 'projectDesc',
+        html: `${description.substring(0, 200)}`
     });
-    
+
 
     cardBodyDiv.append(nameDiv, descDiv);
     cardDiv.append(imageDiv, cardBodyDiv);
@@ -66,8 +72,8 @@ function displayCards() {
         var imgSrc = projects[i].image;
         var description = projects[i].description
         var projectLink = $("<a>", {
-            class:"projectLink",
-            style:"z-index:200000000",
+            class: "projectLink",
+            style: "z-index:2",
             href: projects[i].link
         });
 
