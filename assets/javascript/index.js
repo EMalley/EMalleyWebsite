@@ -3,27 +3,26 @@ let projects = [
         name: "Wall-IT",
         image: "assets/images/WallItLogo.png",
         description: "Built using React.js, Wall-IT is financing program that organizes all of your personal Finances, from monthly bills, stock holdings, and mortages rates.",
-        link: "https://github.com/EMalley/wall-it",
+        link: "https://sheltered-mesa-24365.herokuapp.com",
     },
     {
         name: "Spice It Recipes",
         image: "assets/images/SpiceItLogo.png",
-        description: "A great recipe guide for anyone who loves to cook. This project was built using HTML5,CSS3, and JavaScript to dynamically create content based on the users search result. Spice It offers the services of AmazonFresh to order all the ingredients you need to make your next homecooked meal! ",
-        link: "https://github.com/EMalley/spiceIt",
+        description: "A great recipe guide for anyone who loves to cook. This project was built using HTML5,CSS3, and JavaScript to dynamically create recipe cards based on the users search result.",
+        link: "https://emalley.github.io/spiceIt",
     },
     {
         name: "Eat the Burger",
         image: "assets/images/burger.jpg",
         description: "A app that follows OOP and CRUD principles by ordering burgers, where the user can the eat, and then delete their burger data. The database is a MySQL sever using Sequelize.",
-        link: "https://github.com/EMalley/burgers",
+        link: "https://radiant-cove-92286.herokuapp.com",
     },
     {
         name: "React Memory Game",
         image: "assets/images/memory.jpg",
         description: "A React.js built game designed to test your memory. Good Luck!",
-        link: "https://github.com/EMalley/clickyGame",
+        link: "https://emalley.github.io/clickyGame",
     },
-
     {
         name: "LIRI Bot",
         image: "assets/images/LIRIBOT.png",
@@ -34,14 +33,14 @@ let projects = [
         name: "Giphy API",
         image: "assets/images/giphy-logo.png",
         description: "A demonstration of my knowledge of APIs, using the giphy API. The user can search for any kind of image and have the images be saved to a button, which then can be revisited later.",
-        link: "https://github.com/EMalley/giphyAPI",
+        link: "https://emalley.github.io/giphyAPI",
     }
 ];
 
-function createProjectCard(name, imgSrc, description, linktorepo) {
+function createProjectCard(name, imgSrc, description, link) {
     var cardDiv = $('<div>', {
         class: 'card projectCard',
-        style: 'width:18rem'
+        style: 'width:18rem '
     });
     var imageDiv = $('<img>', {
         class: 'projectImage w-100',
@@ -51,7 +50,7 @@ function createProjectCard(name, imgSrc, description, linktorepo) {
     var cardBodyDiv = $('<div>', { class: 'card-body' });
     var nameDiv = $('<div>', {
         class: 'projectName text-center',
-        html: `<a class="text-truncate projectLink" href=${linktorepo}>${name}</h3>`,
+        html: `<a class="text-truncate projectLink" style='cursor:pointer' href=${link}>${name}</h3>`,
     });
     var descDiv = $('<div>', {
         class: 'projectDesc',
